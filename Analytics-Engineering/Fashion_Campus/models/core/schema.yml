@@ -1,0 +1,23 @@
+
+version: 2
+
+models:
+  - name: dim_click_daily_details
+    description: >
+      List the click details according to different products.
+      It provides the answers to 
+        1. products that are popular or recommended.
+        2. How often a product is search
+        3. When a product is launched how much time does it take to become popular among users.
+
+  - name: fact_orders
+    description: >
+      Orders details corresponding to customers, products , clickstream and transactions.
+      Each records corresponds to an order uniquely identified by transaction_id.
+
+  - name: dim_orders_monthly_revenue
+    description: >
+      Aggregated table of all orders corresponding to customers, products, and transactions.
+      The tables provides information of monthly sums of the billing elements used to calculate the monthly revenue.
+  
+

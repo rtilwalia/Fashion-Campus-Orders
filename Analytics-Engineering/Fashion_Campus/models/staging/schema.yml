@@ -1,0 +1,304 @@
+version: 2
+
+sources:
+  - name: staging
+    database: homewrok-project
+    schema: Fashion_Campus
+
+    tables:
+      - name: Customer
+      - name: Product
+      - name: Transactions
+      - name: clickstream
+
+models:
+  - name: staging_product_data
+    description: ""
+    columns:
+      - name: product_id
+        data_type: int64
+        description: ""
+        tests:
+          - unique:
+              severity: warn
+          - not_null:
+              severity: warn
+
+      - name: gender
+        data_type: string
+        description: ""
+
+      - name: mastercategory
+        data_type: string
+        description: ""
+
+      - name: subcategory
+        data_type: string
+        description: ""
+
+      - name: articletype
+        data_type: string
+        description: ""
+
+      - name: basecolour
+        data_type: string
+        description: ""
+
+      - name: season
+        data_type: string
+        description: ""
+
+      - name: year
+        data_type: int64
+        description: ""
+
+      - name: usage
+        data_type: string
+        description: ""
+
+      - name: productdisplayname
+        data_type: string
+        description: ""
+
+  - name: staging_transactions_data
+    description: ""
+    columns:
+      - name: transaction_id
+        data_type: string
+        description: ""
+        tests:
+          - unique:
+              severity: warn
+          - not_null:
+              severity: warn
+
+      - name: customer_id
+        data_type: int64
+        description: ""
+        tests:
+          - relationships:
+              to: ref('staging_Customer_data')
+              field: customer_id
+              severity: warn
+
+      - name: booking_id
+        data_type: string
+        description: ""
+
+      - name: session_id
+        data_type: string
+        description: ""
+        tests:
+          - relationships:
+              to: ref('staging_clickstream_data')
+              field: session_id
+              severity: warn
+
+      - name: product_id
+        data_type: int64
+        description: ""
+        tests:
+          - relationships:
+              to: ref('staging_clickstream_data')
+              field: session_id
+              severity: warn
+
+      - name: created_at
+        data_type: timestamp
+        description: ""
+
+      - name: shipment_date_limit
+        data_type: timestamp
+        description: ""
+
+      - name: shipment_days
+        data_type: int64
+        description: ""
+
+      - name: shipment_location_lat
+        data_type: string
+        description: ""
+
+      - name: shipment_location_long
+        data_type: string
+        description: ""
+
+      - name: payment_method
+        data_type: string
+        description: ""
+
+      - name: payment_status
+        data_type: string
+        description: ""
+
+      - name: promo_code
+        data_type: string
+        description: ""
+
+      - name: quantity
+        data_type: int64
+        description: ""
+
+      - name: promo_amount
+        data_type: numeric
+        description: ""
+
+      - name: shipment_fee
+        data_type: numeric
+        description: ""
+
+      - name: item_price
+        data_type: numeric
+        description: ""
+
+      - name: total_amount
+        data_type: numeric
+        description: ""
+
+  - name: staging_customer_data
+    description: ""
+    columns:
+      - name: customer_unique_id
+        data_type: string
+        description: ""
+        tests:
+          - unique:
+              severity: warn
+          - not_null:
+              severity: warn
+
+      - name: customer_id
+        data_type: int64
+        description: ""
+        tests:
+          - unique:
+              severity: warn
+          - not_null:
+              severity: warn
+
+      - name: first_join_date
+        data_type: date
+        description: ""
+
+      - name: birthdate
+        data_type: date
+        description: ""
+
+      - name: first_name
+        data_type: string
+        description: ""
+
+      - name: last_name
+        data_type: string
+        description: ""
+
+      - name: username
+        data_type: string
+        description: ""
+
+      - name: email
+        data_type: string
+        description: ""
+
+      - name: gender
+        data_type: string
+        description: ""
+
+      - name: device_id
+        data_type: string
+        description: ""
+
+      - name: device_type
+        data_type: string
+        description: ""
+
+      - name: device_version
+        data_type: string
+        description: ""
+
+      - name: home_location_lat
+        data_type: numeric
+        description: ""
+
+      - name: home_location_long
+        data_type: numeric
+        description: ""
+
+      - name: home_location
+        data_type: string
+        description: ""
+
+      - name: home_country
+        data_type: string
+        description: ""
+
+  - name: staging_clickstream_data
+    description: ""
+    columns:
+      - name: clickstream_id
+        data_type: string
+        description: ""
+        tests:
+          - unique:
+              severity: warn
+          - not_null:
+              severity: warn
+
+      - name: session_id
+        data_type: string
+        description: ""
+        tests:
+          - unique:
+              severity: warn
+          - not_null:
+              severity: warn
+
+      - name: product_id
+        data_type: int64
+        description: ""
+        tests:
+          - relationships:
+              to: ref('staging_Product_data')
+              field: product_id
+              severity: warn
+
+      - name: event_id
+        data_type: string
+        description: ""
+
+      - name: event_name
+        data_type: string
+        description: ""
+
+      - name: event_time
+        data_type: timestamp
+        description: ""
+
+      - name: traffic_source
+        data_type: string
+        description: ""
+
+      - name: search_keywords
+        data_type: string
+        description: ""
+
+      - name: quantity
+        data_type: int64
+        description: ""
+
+      - name: item_price
+        data_type: numeric
+        description: ""
+
+      - name: payment_status
+        data_type: string
+        description: ""
+
+      - name: promo_code
+        data_type: string
+        description: ""
+
+      - name: promo_amount
+        data_type: numeric
+        description: ""
+
