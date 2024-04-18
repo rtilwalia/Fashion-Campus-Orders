@@ -43,7 +43,11 @@ Develop a data architecture from the raw data of the Fashion Campus using Google
    - [Google Looker Studio](https://lookerstudio.google.com/overview)
    - Check out the dashboards below
    - Fashion Campus Order Analysis - https://lookerstudio.google.com/u/0/reporting/bd6e5b38-1d02-4395-9b30-395046c28f68/page/OoIxD?s=kgU0Du65M1k
+     ![image](https://github.com/rtilwalia/Fashion-Campus-Orders/assets/32938713/779e5362-294c-4da1-bc7b-f243340a5330)
+
    - Fashion Campus Product Details - https://lookerstudio.google.com/s/kQqG5WWwpHo
+     ![Screenshot 2024-04-18 at 2 11 41 PM](https://github.com/rtilwalia/Fashion-Campus-Orders/assets/32938713/88137e22-ae61-4bda-adf2-3568a8136033)
+
 
 #### Future Scope of the project
 1. Creating CI/CD pipeline on DBT, so that data can be merged easily on git.
