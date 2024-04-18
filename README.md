@@ -1,5 +1,13 @@
 # Fashion-Campus-Orders
-### Data Engineering project for an Indonesian e-commerce website Fashion Campus. Developed an end-to-end data pipeline for the analysis of orders, transaction, products and clickstream from Fashion Campus.
+#### Data Engineering 2024 project for DataEngineer-Zoomcamp. Developed an end-to-end data pipeline for an Indonesian e-commerce website Fashion Campus. 
+
+Data is extracted from Kaggle - https://www.kaggle.com/datasets/latifahhukma/fashion-campus/data?select=transactions.csv
+Information about the data - Fashion Campus, an e-commerce fashion company targeting "Indonesian Young Urbans" - young people aged 15-35 - was established in Indonesia in early 2016. The company offers a catalog of local and international brands popular among young people. 
+The dataset contains 4 CSV files
+1. Clickstream
+2. Transactions
+3. Product
+4. Customer
 
 Data Architecture of the project-
 
