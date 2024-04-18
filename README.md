@@ -1,7 +1,7 @@
 # Fashion-Campus-Orders
 #### Data Engineering 2024 project for DataEngineer-Zoomcamp. Developed an end-to-end data pipeline for an Indonesian e-commerce website Fashion Campus. 
 
-Data is extracted from [Kaggle]https://www.kaggle.com/datasets/latifahhukma/fashion-campus/data?select=transactions.csv
+Data is extracted from Kaggle - https://www.kaggle.com/datasets/latifahhukma/fashion-campus/data?select=transactions.csv
 
 Information about the data - Fashion Campus, an e-commerce fashion company targeting "Indonesian Young Urbans" - young people aged 15-35 - was established in Indonesia in early 2016. The company offers a catalog of local and international brands popular among young people. 
 Given that the data is static, the data pipeline operates as a one-time process.
@@ -41,8 +41,9 @@ Develop a data architecture from the raw data of the Fashion Campus using Google
 
 6. **Dashboarding:**
    - [Google Looker Studio](https://lookerstudio.google.com/overview)
-   - [Fashion Campus Order Analysis]https://lookerstudio.google.com/u/0/reporting/bd6e5b38-1d02-4395-9b30-395046c28f68/page/OoIxD?s=kgU0Du65M1k
-   - [Fashion Campus Product Details]https://lookerstudio.google.com/s/kQqG5WWwpHo
+   - Check out the dashboards below
+   - Fashion Campus Order Analysis - https://lookerstudio.google.com/u/0/reporting/bd6e5b38-1d02-4395-9b30-395046c28f68/page/OoIxD?s=kgU0Du65M1k
+   - Fashion Campus Product Details - https://lookerstudio.google.com/s/kQqG5WWwpHo
 
 #### Future Scope of the project
 1. Creating CI/CD pipeline on DBT, so that data can be merged easily on git.
