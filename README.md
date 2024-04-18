@@ -34,6 +34,9 @@ Develop a data architecture from the raw data of the Fashion Campus using Google
    - [dbt](https://www.getdbt.com/)
    - DBT is used for the development of the ETL of the data. Developed staging tables for the files which are further joined into a fact table.
    - Further dimensions are created according to the requirement and then data is pushed into data warehouse in batches.
+  
+     ![dbt_data_architecture](https://github.com/rtilwalia/Fashion-Campus-Orders/assets/32938713/87f79833-39c4-48bf-a47a-e84b26fb30a7)
+
 
 5. **Data Warehousing:**
    - [Google BigQuery](https://cloud.google.com/bigquery?hl=en)
